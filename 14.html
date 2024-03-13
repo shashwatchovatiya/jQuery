@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Selector Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .myClass {
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<button id="myButton">Click Me</button>
+
+<p class="myClass">Hover over me</p>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<script>
+    $(document).ready(function(){
+        // ID selector
+        $('#myButton').click(function(){
+            alert("Button with ID 'myButton' clicked!");
+        });
+
+        // Class selector
+        $('.myClass').hover(function(){
+            $(this).css("color", "red");
+        }, function(){
+            $(this).css("color", "black");
+        });
+
+        // Tag selector
+        $('p').dblclick(function(){
+            $(this).css("font-weight", "bold");
+        });
+    });
+</script>
+
+</body>
+</html>

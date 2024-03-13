@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Selector Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .item {
+        padding: 10px;
+        margin-bottom: 5px;
+        background-color: lightblue;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        // First selector
+        $('.container .item:first').css("color", "red");
+
+        // Last selector
+        $('.container .item:last').css("font-weight", "bold");
+
+        // eq selector
+        $('.container .item:eq(2)').css("background-color", "yellow");
+    });
+</script>
+
+</body>
+</html>
+ 

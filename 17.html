@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paragraph Toggle</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+  .paragraph {
+    display: none;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h2 class="title">Paragraph 1</h2>
+<p class="paragraph">This is paragraph 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, mollitia dolorem voluptate facilis libero est laborum fugit amet doloribus architecto ratione iste similique voluptas expedita et earum officiis omnis totam repudiandae recusandae molestiae labore dignissimos laboriosam. Veniam sapiente nulla suscipit, sit fuga temporibus reiciendis blanditiis amet at sequi iste dicta.
+
+</p>
+
+<h2 class="title">Paragraph 2</h2>
+<p class="paragraph">This is paragraph 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque, commodi hic repellat vel optio aperiam alias aliquam eius dolor mollitia quam deserunt earum praesentium, nemo officiis, officia quod sequi assumenda quos itaque voluptate. Illum tenetur nostrum ducimus dolorum! Officia magni voluptate accusantium ab quisquam veniam excepturi id enim architecto.</p>
+
+<h2 class="title">Paragraph 3</h2>
+<p class="paragraph">This is paragraph 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt cupiditate nostrum porro, expedita, eaque veritatis magni enim nulla atque dolores deleniti culpa voluptatibus rem earum placeat repellendus similique recusandae. Vitae magnam eaque ratione minima adipisci illo architecto iure porro, rerum qui fugit odio earum facilis laboriosam modi voluptates quaerat reprehenderit.</p>
+
+<h2 class="title">Paragraph 4</h2>
+<p class="paragraph">This is paragraph 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptatem explicabo possimus! Consequuntur repellat, architecto cumque consequatur soluta nobis ducimus voluptas sapiente blanditiis, libero perferendis. Earum, dolorum deleniti officia velit dolores temporibus voluptas. Eum vitae sequi nemo assumenda laboriosam culpa, iste sint laborum sit totam atque ipsam voluptates mollitia doloribus!</p>
+
+<script>
+  $(document).ready(function(){
+    $('.title').click(function(){
+      // Hide all paragraphs
+      $('.paragraph').hide();
+      
+      // Show the paragraph next to the clicked title
+      $(this).next('.paragraph').show();
+    });
+  });
+</script>
+
+</body>
+</html>

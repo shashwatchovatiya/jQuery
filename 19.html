@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #colorDropdown {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change Background Color</h2>
+    <select id="colorDropdown">
+        <option value="white">White</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightpink">Light Pink</option>
+    </select>
+
+    <script>
+        $(document).ready(function(){
+            // Function to change background color
+            function changeBackgroundColor(color) {
+                $('body').css('background-color', color);
+            }
+
+            // Event listener for dropdown change
+            $('#colorDropdown').change(function(){
+                var selectedColor = $(this).val();
+                changeBackgroundColor(selectedColor);
+            });
+        });
+    </script>
+</body>
+</html>

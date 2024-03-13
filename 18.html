@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Table</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Generate Multiplication Table</h2>
+
+<div>
+    <label for="number">Enter a number:</label>
+    <input type="text" id="number" name="number">
+    <button id="generateTable">Generate Table</button>
+</div>
+
+<div id="tableContainer">
+    <!-- Multiplication table will be displayed here -->
+</div>
+
+<script>
+$(document).ready(function(){
+    $('#generateTable').click(function(){
+        var userInput = $('#number').val();
+        // Check if input is numeric and greater than or equal to 1
+        if($.isNumeric(userInput) && userInput >= 1){
+            $('#tableContainer').empty(); // Clear previous table if any
+            var tableHTML = '<h3>Multiplication Table for ' + userInput + '</h3><table border="1">';
+            for(var i = 1; i <= 10; i++){
+                tableHTML += '<tr><td>' + userInput + ' x ' + i + '</td><td>' + (userInput * i) + '</td></tr>';
+            }
+            tableHTML += '</table>';
+            $('#tableContainer').append(tableHTML);
+        } else {
+            alert('Please enter a numeric value greater than or equal to 1.');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

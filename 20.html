@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fade Effect</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    #fadeImage {
+        display: none; /* Hide the image initially */
+        width: 500px;
+        height: 500px;
+    }
+</style>
+</head>
+<body>
+
+<button id="fadeInButton">Fade In</button>
+<button id="fadeOutButton">Fade Out</button>
+<img id="fadeImage" src=" https://source.unsplash.com/random" alt="Image">
+
+<script>
+    $(document).ready(function(){
+        // Fade in image when clicking the fade in button
+        $("#fadeInButton").click(function(){
+            $("#fadeImage").fadeIn();
+        });
+
+        // Fade out image when clicking the fade out button
+        $("#fadeOutButton").click(function(){
+            $("#fadeImage").fadeOut();
+        });
+    });
+</script>
+
+</body>
+</html>

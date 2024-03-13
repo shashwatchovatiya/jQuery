@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>116 jQuery 3</title>
+    <!-- Including jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        h1 {
+            color: #006600;
+        }
+       
+        body {
+            text-align: center;
+        }
+        div {
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            
+            width: 80%;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid #006600;
+            padding: 8px;
+        }
+        thead {
+            background-color: #FFA500;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .odd:hover {
+            background-color: green;
+            color: white;
+        }
+        .even:hover {
+            background-color: green;
+            color: white;
+        }
+        .even{
+            background-color: pink;
+            color: white;
+        }
+        .odd{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shashwat Tabel</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Col-1</th>
+                    <th>Col-2</th>
+                    <th>Col-3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td>1</td>
+                    <td>Column00</td>
+                    <td>Column01</td>
+                    <td>Column02</td>
+                </tr>
+                <tr class="even">
+                    <td>2</td>
+                    <td>Column10</td>
+                    <td>Column11</td>
+                    <td>Column12</td>
+                </tr>
+                <tr class="odd">
+                    <td>3</td>
+                    <td>Column20</td>
+                    <td>Column21</td>
+                    <td>Column22</td>
+                </tr>
+                <tr class="even"> 
+                    <td>4</td>
+                    <td>Column30</td>
+                    <td>Column31</td>
+                    <td>Column2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("tr").hover(function() {
+                $(this).toggleClass("odd");
+            });
+
+            $("tr").hover(function() {
+                $(this).toggleClass("even");
+            });
+        });
+    </script>
+</body>
+</html>
